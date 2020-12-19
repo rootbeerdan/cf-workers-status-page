@@ -3,7 +3,7 @@ settings:
   url: 'https://status-page.eidam.dev' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
-  collectResponseTimes: false # experimental feature, enable only for <5 monitors or on paid plans
+  collectResponseTimes: true # experimental feature, enable only for <5 monitors or on paid plans
 
   allmonitorsOperational: 'All Systems Operational'
   notAllmonitorsOperational: 'Not All Systems Operational'
@@ -16,17 +16,17 @@ settings:
 
 monitors:
   - id: workers-daniel-com # unique identifier
-    name: workers.cloudflare.com
+    name: da.nielmarks.com
     description: 'Testing this thing' # default=empty
     url: 'https://da.nielmarks.com/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: danielmarks-dev
+    name: live.danielmarks.dev
+    description: 'Dev stream site test'
+    url: 'https://live.danielmarks.dev'
     method: GET
     expectStatus: 200
 
